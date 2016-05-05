@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   
+	<TextView android:id="@+id/textview1_imageviewbase"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="scaleType:center为缩放，放在ImageView的中心"/>
+	
+	<ImageView android:id="@+id/imageviewbase1"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:background="#f00"
+    	android:src="@drawable/b"
+    	android:scaleType="center"/>
+	
+	<TextView android:id="@+id/textview2_imageviewbase"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="fitCenter按照比例缩放"
+    	android:layout_marginTop="20dp"/>
+	
+	<ImageView android:id="@+id/imageviewbase2"
+	    android:layout_width="100dp"
+    	android:layout_height="200dp"
+    	android:background="#fff"
+    	android:src="@drawable/b"
+    	android:scaleType="fitCenter"/>
+	
+</LinearLayout>
