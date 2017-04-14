@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <string name="singapore_text">在本篇文章中仅仅只是说明了约束布局的操作，详细的约束布局创建的XML内容以及原理并没有在这一章中进行讲解，会在后续章节中讲解；当然说到布局XML，在约束布局中并不建议直接操作XML文件来完成布局，而建议使用鼠标拖动来添加对应的约束。\n
+通过本篇文章的学习，基本上一个简单的不需要滚动的布局都可以使用约束布局来完成，也仅仅只需要一层就可以了，所有的控件无论在多一层足够了。\n
+这是否意味着抛弃其他控件？并不是的！约束布局仅仅只是一种新的思路，其适用于界面不太复杂，并且不滚动的界面中布局，如果界面元素很多甚至超过屏幕，哪么并不建议使用约束布局。\n
+另外约束布局仅仅是简单快捷的布局，其性能负担随着界面中的控件数量以及约束条件的增加而增加；所以使用时还需要多多考究。\n\n\n</string>
+    <string name="singapore">新加坡</string>
+    <string name="camera">相机</string>
+    <string name="camera_value">Canno XT650</string>
+    <string name="settings">设置</string>
+    <string name="settings_value">F/4 16s ISO 200</string>
 </resources>
