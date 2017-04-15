@@ -7,4 +7,7 @@
     tools:context="com.ison.myapp.MainActivity">
 
     <include layout="@layout/activity_scrolling"/>
+
+
+
 </android.support.v4.widget.NestedScrollView>

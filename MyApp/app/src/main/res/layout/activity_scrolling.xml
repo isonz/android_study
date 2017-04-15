@@ -97,4 +97,15 @@
         android:layout_marginBottom="24dp"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
+
+    <AnalogClock
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:dial="@mipmap/timg"
+        android:hand_hour="@mipmap/clock_shi"
+        android:hand_minute="@mipmap/clock_fen"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+
 </android.support.constraint.ConstraintLayout>
