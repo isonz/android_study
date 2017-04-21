@@ -22,7 +22,7 @@ public class UserInfoActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        Dialog loadingDialog = Func.loadingDialog(this, "加载中。。。。。。");
+        Dialog loadingDialog = Func.loadingDialog(this, "加载中...");
 
         Bundle bd = getIntent().getExtras();
         String jstr = bd.getString("json");
