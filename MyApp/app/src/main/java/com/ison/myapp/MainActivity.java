@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.SimpleCursorAdapter;
 
+import com.ison.myapp.utils.zlib.Func;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -90,7 +92,7 @@ public class MainActivity extends AppCompatActivity
         });
         */
 
-        String jsonstr = "[{'id':'1021','name':'AAAAA','say':'无形被黑，最为致命','touxiang':2130903046},{'id':'1032','name':'BBBBB','say':'大神好厉害~','touxiang':2130903047},{'id':'1043','name':'CCCCC','say':'我将带头~','touxiang':2130903048},{'id':'1054','name':'DDDDD','say':'无形被黑，最为致命~','touxiang':2130903046},{'id':'1065','name':'EEEEE','say':'大神好厉害~','touxiang':2130903047},{'id':'1076','name':'FFFFF','say':'我将带头~','touxiang':2130903048},{'id':'1087','name':'GGGGG','say':'无形被黑，最为致命~','touxiang':2130903046},{'id':'1098','name':'HHHHH','say':'大神好厉害~','touxiang':2130903047},{'id':'1109','name':'IIIII','say':'我将带头~','touxiang':2130903048},{'id':'1110','name':'JJJJJ','say':'无形被黑，最为致命~','touxiang':2130903046},{'id':'1121','name':'KKKKK','say':'大神好厉害~','touxiang':2130903047},{'id':'1132','name':'LLLLL','say':'我将带头~','touxiang':2130903048}]";
+        String jsonstr = "[{'id':'1021','name':'AAAAA','say':'无形被黑，最为致命','touxiang':2130903049},{'id':'1032','name':'BBBBB','say':'大神好厉害~','touxiang':2130903047},{'id':'1043','name':'CCCCC','say':'我将带头~','touxiang':2130903048},{'id':'1054','name':'DDDDD','say':'无形被黑，最为致命~','touxiang':2130903046},{'id':'1065','name':'EEEEE','say':'大神好厉害~','touxiang':2130903047},{'id':'1076','name':'FFFFF','say':'我将带头~','touxiang':2130903048},{'id':'1087','name':'GGGGG','say':'无形被黑，最为致命~','touxiang':2130903046},{'id':'1098','name':'HHHHH','say':'大神好厉害~','touxiang':2130903047},{'id':'1109','name':'IIIII','say':'我将带头~','touxiang':2130903048},{'id':'1110','name':'JJJJJ','say':'无形被黑，最为致命~','touxiang':2130903046},{'id':'1121','name':'KKKKK','say':'大神好厉害~','touxiang':2130903047},{'id':'1132','name':'LLLLL','say':'我将带头~','touxiang':2130903048}]";
         try {
             jsonArray = new JSONArray(jsonstr);
         }catch (JSONException e){
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity
 
         list = Func.jsonArry2ListMap(jsonArray);
         Log.i("list", list.toString());
+        Log.i("imgIds", String.valueOf(R.mipmap.touxiang3));
 
         String[] titles = new String[]{"name", "says", "touxiang"};
         int[] viewid = new int[]{R.id.name, R.id.says, R.id.imgtou};
