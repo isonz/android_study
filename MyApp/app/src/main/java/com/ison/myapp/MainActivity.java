@@ -1,5 +1,6 @@
 package com.ison.myapp;
 
+import android.app.Dialog;
 import android.app.LauncherActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -116,6 +117,7 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(context, UserInfoActivity.class);
                 try {
+                    Func.loadingDialog(context, "加载中");
                     intent.putExtra("json", jsonArray.get(position).toString());
                     Log.i("json", jsonArray.get(position).toString());
                 }catch (JSONException e){
