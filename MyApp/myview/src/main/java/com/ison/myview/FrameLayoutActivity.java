@@ -6,14 +6,22 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.graphics.drawable.Drawable;
+
+import com.ison.myview.entity.MeziView;
 
 
 public class FrameLayoutActivity extends AppCompatActivity
 {
     //初始化变量,帧布局
     FrameLayout frame = null;
+    private boolean isBackPressed = false;
+
+
+
     //自定义一个用于定时更新UI界面的handler类对象
     Handler handler = new Handler()
     {
@@ -73,6 +81,7 @@ public class FrameLayoutActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //========== 动画
         super.onCreate(savedInstanceState);
         setContentView(R.layout.frame_layout);
 
@@ -86,6 +95,40 @@ public class FrameLayoutActivity extends AppCompatActivity
                 handler.sendEmptyMessage(0x123);
             }
         }, 0,170);
+
+
+
+        //========== 跟随
+        final MeziView mezi = new MeziView(FrameLayoutActivity.this);
+        //为我们的萌妹子添加触摸事件监听器
+        mezi.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                //设置妹子显示的位置
+                mezi.bitmapX = event.getX() - 350;      //不同的图片尺寸值不同，取图中心。
+                mezi.bitmapY = event.getY() - 450;
+                //调用重绘方法
+                mezi.invalidate();
+                return true;
+            }
+        });
+        frame.addView(mezi);
+
+    }
+
+
+    //Activity创建或者从后台重新回到前台时被调用
+    @Override
+    protected void onStart() {
+        super.onStart();
+        overridePendingTransition(R.anim.left_out, R.anim.origin);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        isBackPressed = true;
+        overridePendingTransition(0, R.anim.right_in);
     }
 
 }

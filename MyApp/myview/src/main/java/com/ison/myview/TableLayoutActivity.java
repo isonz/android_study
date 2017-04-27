@@ -1,82 +1,31 @@
 package com.ison.myview;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity
+
+public class TableLayoutActivity extends AppCompatActivity
 {
     private Context context = this;
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "LinearLayoutActivity";
     private int param = 1;
+    private boolean isBackPressed = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.table_layout);
 
-
-        Button linear_layout = (Button) findViewById(R.id.linear_layout);
-        linear_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, LinearLayoutActivity.class);
-                //intent.putExtra("name", "abc");
-                startActivity(intent);
-            }
-        });
-
-        Button frame_layout = (Button) findViewById(R.id.frame_layout);
-        frame_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, FrameLayoutActivity.class);
-                //intent.putExtra("name", "abc");
-                startActivity(intent);
-            }
-        });
-
-        Button grid_layout = (Button) findViewById(R.id.grid_layout);
-        grid_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, GridLayoutActivity.class);
-                //intent.putExtra("name", "abc");
-                startActivity(intent);
-            }
-        });
-
-        Button table_layout = (Button) findViewById(R.id.table_layout);
-        table_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, TableLayoutActivity.class);
-                //intent.putExtra("name", "abc");
-                startActivity(intent);
-            }
-        });
-
-        Button text_view = (Button) findViewById(R.id.text_view);
-        text_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, TextViewActivity.class);
-                //intent.putExtra("name", "abc");
-                startActivity(intent);
-            }
-        });
 
     }
-
 
     //Activity创建或者从后台重新回到前台时被调用
     @Override
     protected void onStart() {
         super.onStart();
+        overridePendingTransition(R.anim.left_out, R.anim.origin);
         Log.i(TAG, "onStart called.");
     }
 
@@ -105,7 +54,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onPause() {
         super.onPause();
-        overridePendingTransition(R.anim.left_out, R.anim.right_in);
+        if(!isBackPressed) overridePendingTransition(R.anim.origin, R.anim.right_in);
+
         Log.i(TAG, "onPause called.");
         //有可能在执行完onPause或onStop后,系统资源紧张将Activity杀死,所以有必要在此保存持久数据
     }
@@ -149,4 +99,12 @@ public class MainActivity extends AppCompatActivity
         super.onRestoreInstanceState(savedInstanceState);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        isBackPressed = true;
+        overridePendingTransition(0, R.anim.right_in);
+        Log.i(TAG, "onBackPressed called.");
+    }
 }

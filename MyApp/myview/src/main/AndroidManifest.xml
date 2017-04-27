@@ -42,6 +42,26 @@
                 android:value="com.ison.myview.GridLayoutActivity" />
         </activity>
 
+        <activity
+            android:name=".TableLayoutActivity"
+            android:label="TableLayout"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ison.myview.TableLayoutActivity" />
+        </activity>
+
+        <activity
+            android:name=".TextViewActivity"
+            android:label="TableLayout"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ison.myview.TextViewActivity" />
+        </activity>
+
     </application>
 
 </manifest>
