@@ -2,19 +2,21 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="0dp"
-    android:layout_height="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dark"
     tools:context="com.example.ison.myapplication.MainActivity"
-    tools:layout_editor_absoluteY="0dp"
-    android:background="@color/color_red"
-    android:layout_marginRight="0dp"
-    app:layout_constraintRight_toRightOf="parent"
-    android:layout_marginLeft="0dp"
-    app:layout_constraintLeft_toLeftOf="parent">
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
 
-        
+    <include layout="@layout/header"
+        android:id="@+id/header"/>
 
 
+
+
+    <include layout="@layout/footer"
+        android:id="@+id/footer"/>
 
 
 </android.support.constraint.ConstraintLayout>
