@@ -252,7 +252,7 @@
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:background="@color/color_red"
-                    android:text="NEXT"
+                    android:text="ADD TO CART"
                     android:textSize="16sp"
                     android:layout_alignParentRight="true"
                     style="?android:attr/borderlessButtonStyle"/>

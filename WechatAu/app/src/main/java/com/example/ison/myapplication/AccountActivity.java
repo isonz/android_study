@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import java.util.List;
 
@@ -33,6 +35,26 @@ public class AccountActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+
+
+
+        RelativeLayout myOrders = (RelativeLayout) findViewById(R.id.account_my_order);
+        myOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, OrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+        LinearLayout btns4 = (LinearLayout)findViewById(R.id.btns4);
+        btns4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, OrdersActivity.class);
+                startActivity(intent);
             }
         });
 
