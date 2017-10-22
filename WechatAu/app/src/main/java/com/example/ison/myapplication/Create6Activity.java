@@ -1,36 +1,26 @@
 package com.example.ison.myapplication;
 
-import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.transition.Slide;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import java.util.List;
 
 
-public class CartActivity extends AppCompatActivity
+public class Create6Activity extends AppCompatActivity
 {
     private Context context = this;
-    private static final String TAG = "CartActivity";
+    private static final String TAG = "Create6Activity";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_create6);
 
         ImageView returnBtn = (ImageView)findViewById(R.id.return_btn);
         returnBtn.setOnClickListener(new View.OnClickListener() {
@@ -40,11 +30,20 @@ public class CartActivity extends AppCompatActivity
             }
         });
 
-        TextView checkoutBtn = (TextView)findViewById(R.id.checkout_btn);
-        checkoutBtn.setOnClickListener(new View.OnClickListener() {
+
+
+        Button backBtn = (Button)findViewById(R.id.create1_back);
+        backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BuyActivity.class);
+                finish();
+            }
+        });
+        Button nextBtn = (Button)findViewById(R.id.create1_next);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CartActivity.class);
                 startActivity(intent);
             }
         });
@@ -62,13 +61,4 @@ public class CartActivity extends AppCompatActivity
         //有可能在执行完onPause或onStop后,系统资源紧张将Activity杀死,所以有必要在此保存持久数据
     }
 
-    public static boolean isClsRunning(String pkg, String cls, Context context) {
-        ActivityManager am =(ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
-        ActivityManager.RunningTaskInfo task = tasks.get(0);
-        if (task != null) {
-            return TextUtils.equals(task.topActivity.getPackageName(), pkg) && TextUtils.equals(task.topActivity.getClassName(), cls);
-        }
-        return false;
-    }
 }

@@ -4,8 +4,16 @@
     <string name="nav_cat_name">CART</string>
     <string name="nav_account_name">ACCOUNT</string>
 
+
     <string name="home_search_text">ORDER INQUIRY</string>
     <string name="home_create_break_title">CREATE YOUR BREAK</string>
     <string name="home_create_break_text">Your choice of premium Australian chocolate, crisp batch baked wafers, gourmet ingredients &amp; customised packaging, handcrafted to order by our expert chocolatiers.</string>
+    <string name="product_title">Chocolatiers Choice: Japanese Matcha &amp; Kikusui Leaves</string>
 
+    <string name="copyright">Onion Media Solution</string>
+    <string name="address">SHOP 156,FIRST FLOOR, MELBOURNE CENTRAL \nCnr La Trobe &amp; Swanston st, \n Melbourne VIC 3000</string>
+    <string name="title_activity_main1">Main1Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

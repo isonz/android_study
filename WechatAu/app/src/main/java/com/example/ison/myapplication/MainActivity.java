@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -58,6 +59,48 @@ public class MainActivity extends AppCompatActivity
         });
 
 
+        Button homeSearchBtn = (Button)findViewById(R.id.home_search_btn);
+        homeSearchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, OrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        ImageView createImage = (ImageView)findViewById(R.id.create_image);
+        Button createBtn = (Button)findViewById(R.id.home_product_create);
+        createImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CreateActivity.class);
+                startActivity(intent);
+            }
+        });
+        createBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CreateActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageView buyImage = (ImageView)findViewById(R.id.buy_image);
+        Button buyBtn = (Button)findViewById(R.id.home_product_buy);
+        buyImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CartActivity.class);
+                startActivity(intent);
+            }
+        });
+        buyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CartActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         //handler.postDelayed(updateTimer, 20000);  //設定Delay的時間

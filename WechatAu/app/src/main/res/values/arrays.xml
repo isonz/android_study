@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="background_designs">
+        <item>CHOOSE CATEGORY</item>
+        <item>Solid color</item>
+        <item>Pattern</item>
+        <item>Mickey Mouse</item>
+        <item>HELLO KITTY</item>
+    </string-array>
+
+    <string-array name="flavour">
+        <item>CHOOSE CATEGORY</item>
+        <item>ACID</item>
+        <item>SWEET</item>
+        <item>BITTER</item>
+        <item>HOT</item>
+    </string-array>
+</resources>

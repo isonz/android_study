@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_dark"
-    tools:context="com.example.ison.myapplication.MainActivity"
-    tools:layout_editor_absoluteY="25dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:context="com.example.ison.myapplication.MainActivity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -115,24 +113,211 @@
             android:orientation="horizontal"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
+            
             <TableRow
-                android:id="@+id/home_create_break_product_tableRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp">
+                    <ImageView
+                        android:id="@+id/create_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/create_product"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true" />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp">
+                    <ImageView
+                        android:id="@+id/buy_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/create_product"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"/>
+                </FrameLayout>
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
+                android:layout_marginTop="10dp">
+                <FrameLayout
                     android:layout_height="wrap_content"
-                    android:src="@drawable/create_product"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:text="@string/home_create_break_title"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:textAlignment="textEnd"
+                        android:textStyle="bold"
+                        android:text="$30"/>
+                </FrameLayout>
+                <FrameLayout
                     android:layout_height="wrap_content"
-                    android:src="@drawable/create_product"/>
-
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:text="@string/product_title"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:text="$30"/>
+                </FrameLayout>
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp">
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp">
+                    <Button
+                        android:id="@+id/home_product_create"
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:background="@drawable/button_border"
+                        android:text="CREATE" />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp">
+                    <Button
+                        android:id="@+id/home_product_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:background="@drawable/button_border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="ADD TO CART" />
+                </FrameLayout>
             </TableRow>
         </TableLayout>
 
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/home_create_break_product_layout"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/color_black"
+            android:alpha="0.5">
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/home_foot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/home_create_break_product_layout"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/color_black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INFO"
+                    android:textColor="@color/color_red"
+                    android:textSize="12sp"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FAQs"
+                    android:textColor="@color/color_red"
+                    android:textSize="12sp"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms &amp; Conditions"
+                    android:textColor="@color/color_red"
+                    android:textSize="12sp"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy"
+                    android:textColor="@color/color_red"
+                    android:textSize="12sp"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textColor="@color/color_red"
+                    android:textSize="12sp"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textColor="@color/color_white"
+                    android:textSize="12sp"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/home_foot"/>
         <include layout="@layout/footer"
             android:id="@+id/footer"/>
 
