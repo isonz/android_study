@@ -7,142 +7,240 @@
     android:background="@drawable/bg_dark"
     tools:context="com.example.ison.myapplication.AccountActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/return_block"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:background="@color/color_red"
-            android:gravity="center_vertical">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/return_btn"
-                android:id="@+id/return_btn"
-                android:layout_marginLeft="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="STORES FROM MENTIONING"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/color_white"
-                android:textSize="18sp"/>
-        </LinearLayout>
-
-        <RelativeLayout
+            android:id="@+id/main_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="vertical">
+
             <LinearLayout
+                android:id="@+id/return_block"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/shape_red">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:text="MELBOURNE CENTRAL BOUTIQUE \n SHOP 156, FIRST FLOOR, MELBOURNE CENTRAL \nCnr La Trobe &amp; Swanston st, \nMelboume VIC 3000"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="COLLECT FROM"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
                 android:background="@color/color_red"
-                android:layout_marginLeft="15dp"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/shape_red">
-
-
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="COLLECT TIME"
-                android:background="@color/color_red"
-                android:layout_marginLeft="15dp"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/shape_red">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:text="Please fill in the order form"/>
+                android:gravity="center_vertical">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/go_icon"/>
+                    android:src="@drawable/return_btn"
+                    android:id="@+id/return_btn"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STORES FROM MENTIONING"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <RelativeLayout
+                    android:id="@+id/collect_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_red">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="MELBOURNE CENTRAL BOUTIQUE \n SHOP 156, FIRST FLOOR, MELBOURNE CENTRAL \nCnr La Trobe &amp; Swanston st, \nMelboume VIC 3000"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/go_icon"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="COLLECT FROM"
+                    android:background="@color/color_red"
+                    android:layout_marginLeft="15dp"/>
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_red">
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:paddingRight="10dp">
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@color/color_black"
+                            android:entries="@array/colletion_day"
+                            android:background="@drawable/spinner_border_gray"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@color/color_black"
+                            android:entries="@array/colletion_time"
+                            android:background="@drawable/spinner_border_gray"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="COLLECT TIME"
+                    android:background="@color/color_red"
+                    android:layout_marginLeft="15dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <RelativeLayout
+                    android:id="@+id/order_maker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_red">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Please fill in the order form"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/go_icon"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="ORDER MAKER"
+                    android:background="@color/color_red"
+                    android:layout_marginLeft="15dp"/>
+            </RelativeLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="ORDER MAKER"
-                android:background="@color/color_red"
-                android:layout_marginLeft="15dp"/>
-        </RelativeLayout>
+                android:text="REMARKS"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="-10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:minHeight="100dp"
+                    android:background="@drawable/shape_red">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="REMARKS"
-            android:textSize="14sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="-10dp"/>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
-            <LinearLayout
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="top"
+                        android:textSize="12sp"
+                        android:textColorHint="@color/color_white"
+                        android:hint="If requested, please leave a message"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:minHeight="100dp"
-                android:background="@drawable/shape_red">
+                android:background="@color/color_red"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUBTOTAL: $45"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentLeft="true"/>
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="top"
-                    android:textSize="12sp"
-                    android:textColorHint="@color/color_white"
-                    android:hint="If requested, please leave a message"/>
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAYMENT"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:background="@drawable/shape_white"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/mark_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_black"
+            android:alpha="0.5"
+            android:visibility="gone"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/color_white">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Full name"
+                android:textColorHint="@color/color_red"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Phone Number: 04-"
+                android:textColorHint="@color/color_red"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_red"
+                android:text="Submit"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
 

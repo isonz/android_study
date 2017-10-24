@@ -85,23 +85,16 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        ImageView buyImage = (ImageView)findViewById(R.id.buy_image);
-        Button buyBtn = (Button)findViewById(R.id.home_product_buy);
-        buyImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, CartActivity.class);
-                startActivity(intent);
-            }
-        });
-        buyBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, CartActivity.class);
-                startActivity(intent);
-            }
-        });
 
+
+        TextView textText = (TextView)findViewById(R.id.test_text);
+        textText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, TestActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //handler.postDelayed(updateTimer, 20000);  //設定Delay的時間
     }

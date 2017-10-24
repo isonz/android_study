@@ -35,10 +35,8 @@ public class OrdersActivity extends AppCompatActivity
 
         View orderInfo1 = (View)findViewById(R.id.order_list_1_info);
         View orderInfo2 = (View)findViewById(R.id.order_list_2_info);
-        View orderInfo3 = (View)findViewById(R.id.order_list_3_info);
         Button orderInfoBtn1 = (Button)findViewById(R.id.order_list_1_info_btn);
         Button orderInfoBtn2 = (Button)findViewById(R.id.order_list_2_info_btn);
-        Button orderInfoBtn3 = (Button)findViewById(R.id.order_list_3_info_btn);
         orderInfo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,13 +45,6 @@ public class OrdersActivity extends AppCompatActivity
             }
         });
         orderInfo2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, OrdersInfoActivity.class);
-                startActivity(intent);
-            }
-        });
-        orderInfo3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, OrdersInfoActivity.class);
@@ -74,13 +65,8 @@ public class OrdersActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        orderInfoBtn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, OrdersInfoActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
 
     }
 

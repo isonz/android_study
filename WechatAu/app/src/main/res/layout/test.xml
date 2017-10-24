@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dark"
+    tools:context="com.example.ison.myapplication.TestActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <!--
+        android:layout_height="250dp">
+        <android.support.design.widget.CollapsingToolbarLayout
+            app:layout_scrollFlags="scroll"
+            app:contentScrim="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <TextView
+                android:text="banner区域"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:background="#987545"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+        -->
+
+        <LinearLayout
+            android:id="@+id/return_block"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/color_red"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/return_btn"
+                android:id="@+id/return_btn"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNT"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color_white"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="50dp"
+                        android:text="1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/nav_home"
+                    android:text="@string/nav_home_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_white"
+                    android:drawableTop="@drawable/home"
+                    android:background="@color/color_red"
+                    android:padding="5dp">
+                </Button>
+
+                <Button
+                    android:id="@+id/nav_cart"
+                    android:text="@string/nav_cat_name"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_white"
+                    android:drawableTop="@drawable/cart"
+                    android:background="@color/color_red"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp">
+                </Button>
+
+                <Button
+                    android:id="@+id/nav_account"
+                    android:text="@string/nav_account_name"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_white"
+                    android:drawableTop="@drawable/account"
+                    android:background="@color/color_red"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp">
+                </Button>
+
+            </TableRow>
+        </TableLayout>
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

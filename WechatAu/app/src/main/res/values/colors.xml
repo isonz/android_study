@@ -8,4 +8,6 @@
     <color name="color_black">#000</color>
     <color name="color_white">#fff</color>
     <color name="color_gary">#ccc</color>
+    <color name="color_gary_6">#666</color>
+    <color name="color_gary_9">#999</color>
 </resources>

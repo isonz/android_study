@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 
 public class Create6Activity extends AppCompatActivity
@@ -15,6 +17,8 @@ public class Create6Activity extends AppCompatActivity
     private Context context = this;
     private static final String TAG = "Create6Activity";
 
+    private LinearLayout markLayout;
+    private ImageView share_image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -48,6 +52,27 @@ public class Create6Activity extends AppCompatActivity
             }
         });
 
+
+
+        share_image = (ImageView) findViewById(R.id.share_image);
+        markLayout = (LinearLayout) findViewById(R.id.mark_layout);
+        Button shareBtn = (Button) findViewById(R.id.share_btn);
+        shareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_layout);
+                markLayout.getLayoutParams().height = mainLayout.getHeight();
+                markLayout.setVisibility(View.VISIBLE);
+                share_image.setVisibility(View.VISIBLE);
+            }
+        });
+        markLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                share_image.setVisibility(View.GONE);
+                markLayout.setVisibility(View.GONE);
+            }
+        });
 
     }
 

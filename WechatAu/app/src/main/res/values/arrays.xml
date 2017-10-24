@@ -15,4 +15,21 @@
         <item>BITTER</item>
         <item>HOT</item>
     </string-array>
+
+    <string-array name="colletion_day">
+        <item>Oct 29th</item>
+        <item>Oct 30</item>
+        <item>Nov 1</item>
+        <item>Nov 2</item>
+        <item>Nov 3</item>
+    </string-array>
+
+    <string-array name="colletion_time">
+        <item>After 9am</item>
+        <item>After 10am</item>
+        <item>After 11am</item>
+        <item>After 12am</item>
+        <item>After 13am</item>
+    </string-array>
+
 </resources>
